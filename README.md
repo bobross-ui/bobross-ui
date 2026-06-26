@@ -1,41 +1,64 @@
-# Hi, I'm Kshitij
+# Kshitij Ghode
 
-I build AI-native products, agent infrastructure, and real-time full-stack apps. Lately I have been
-focused on agent memory, grounded retrieval systems, and product-shaped prototypes that hold up past
-the demo.
+Full-stack engineer building AI systems that hold up past the demo: agent memory, grounded retrieval,
+and real-time apps with real users. I ship full products end-to-end, from the database schema to the
+screen.
 
-## What I'm Working On
+> Currently open to backend / AI-infrastructure roles.
 
-- Memory layers for long-running agents
-- RAG systems with hybrid retrieval, citations, and evaluation harnesses
-- Full-stack web and mobile apps with real-time collaboration or matchmaking
-- Local-first AI tooling that is practical to run, inspect, and improve
+## Featured Work
 
-## Featured Projects
+### [CAT-DUEL](https://github.com/bobross-ui/CAT-DUEL) - real-time 1v1 exam-prep duels
 
-| Project | What it is | Stack |
-| --- | --- | --- |
-| [CAT-DUEL](https://github.com/bobross-ui/CAT-DUEL) | Real-time 1v1 CAT exam-prep app with Elo matchmaking, timed duels, live scoring, reconnect-safe game state, and post-match review. | TypeScript, React Native, Expo, Node.js, Socket.io, Postgres, Redis, Prisma |
-| [brain](https://github.com/bobross-ui/brain) | Local-first agentic memory layer with scoped memories, raw conversation storage, hybrid vector + BM25 retrieval, fact extraction, reconciliation, and MCP tools. | Python, SQLite, sqlite-vec, FTS5, Ollama, MCP |
-| [cortex](https://github.com/bobross-ui/cortex) | Social export to vector knowledge base: ingest personal exports, build a pgvector store, and ask grounded questions with cited sources. | Python, FastAPI, Postgres, pgvector, React, DeepSeek |
-| [portfolio](https://github.com/bobross-ui/portfolio) | Personal portfolio codebase with a modern motion-heavy frontend. | Next.js, TypeScript, Tailwind CSS, Framer Motion |
+Two players, one question set, live Elo matchmaking, and timed scoring. The UI is the easy part; the
+hard part is keeping game state consistent when both players answer on the same millisecond and
+connections drop mid-duel. Solved with two-phase locking and Redis `NX` guards for race-free
+concurrent scoring, plus reconnect-safe state so a dropped player rejoins exactly where they left
+off.
 
-## Tech I Reach For
+`TypeScript | React Native | Expo | Node.js | Socket.io | Postgres | Redis | Prisma`
 
-**Languages:** TypeScript, Python, JavaScript, SQL  
-**Frontend:** React, Next.js, React Native, Expo, Tailwind CSS, Framer Motion  
-**Backend:** Node.js, Express, FastAPI, Prisma, PostgreSQL, Redis, SQLite  
-**AI / Retrieval:** RAG, embeddings, vector search, BM25/FTS, MCP, local LLM tooling  
-**Infra / Quality:** Docker, GitHub Actions, testing, CI, observability-minded design
+### [brain](https://github.com/bobross-ui/brain) - local-first memory layer for long-running agents
 
-## Current Direction
+Scoped memories over raw conversation history with hybrid vector + BM25 retrieval, automatic fact
+extraction, and reconciliation when new facts contradict old ones, all exposed as MCP tools so any
+agent can plug in. Built with an eval harness from day one, so retrieval quality is measured, not
+guessed.
 
-I am especially interested in systems where AI is not just a chat box: memory that improves over
-time, retrieval that can explain itself, and interfaces that make complex workflows feel direct.
+LOCOMO `conv-26` reranker blend: **64.8% judged accuracy** (129/199), **73.6% fused evidence recall**,
+**77.7% evidence hit rate**, 0 failures. Single-conversation experiment, 199 questions.
 
-## GitHub Snapshot
+`Python | SQLite | sqlite-vec | FTS5 | Ollama | MCP`
 
-![GitHub stats](https://github-readme-stats.vercel.app/api?username=bobross-ui&show_icons=true&theme=transparent&hide_border=true)
+### [cortex](https://github.com/bobross-ui/cortex) - social exports into a grounded knowledge base
 
-![Top languages](https://github-readme-stats.vercel.app/api/top-langs/?username=bobross-ui&layout=compact&theme=transparent&hide_border=true)
+Ingests personal exports into a pgvector store and answers questions with cited sources, so every
+claim traces back to where it came from. Hybrid retrieval with reciprocal rank fusion instead of
+naive score addition.
 
+`Python | FastAPI | Postgres | pgvector | React | DeepSeek`
+
+## What I'm Into
+
+AI that's more than a chat box: memory that gets better the longer it runs, retrieval that can show
+its work, and real-time interfaces that make complex flows feel direct. Most of what I build is solo,
+in public, and shaped by real users instead of a slide.
+
+## Stack
+
+**Languages** | TypeScript | Python | SQL | JavaScript
+
+**Frontend** | React | Next.js | React Native | Expo | Tailwind | Framer Motion
+
+**Backend** | Node.js | Express | FastAPI | Prisma | PostgreSQL | Redis | SQLite
+
+**AI / Retrieval** | RAG | embeddings | vector search | BM25/FTS | MCP | local LLM tooling
+
+**Infra** | Docker | GitHub Actions | CI | testing | observability-minded design
+
+---
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=bobross-ui&show_icons=true&theme=transparent&hide_border=true" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=bobross-ui&layout=compact&theme=transparent&hide_border=true" />
+</p>
