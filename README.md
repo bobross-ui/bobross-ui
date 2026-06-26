@@ -59,6 +59,5 @@ in public, and shaped by real users instead of a slide.
 ---
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=bobross-ui&show_icons=true&theme=transparent&hide_border=true" />
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=bobross-ui&layout=compact&theme=transparent&hide_border=true" />
 </p>
